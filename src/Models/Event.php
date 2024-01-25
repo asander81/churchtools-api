@@ -18,7 +18,9 @@ class Event extends AbstractModel
     protected ?string $description = null;
     protected ?string $startDate = null;
     protected ?string $endDate = null;
+    protected ?string $appointmentId = null;
     protected ?bool $chatStatus = null;
+    protected ?bool $isCanceled = null;
     protected ?array $permissions = null;
     protected ?DomainAttributeModel $calendar = null;
     protected ?EventAgenda $agenda = null;
@@ -167,6 +169,24 @@ class Event extends AbstractModel
     }
 
     /**
+     * @return string|null
+     */
+    public function getAppointmentId(): ?string
+    {
+        return $this->appointmentId;
+    }
+
+    /**
+     * @param string|null $appointmentId
+     * @return Event
+     */
+    public function setAppointmentId(?string $appointmentId): Event
+    {
+        $this->appointmentId = $appointmentId;
+        return $this;
+    }
+
+    /**
      * @return bool|null
      */
     public function getChatStatus(): ?bool
@@ -184,6 +204,24 @@ class Event extends AbstractModel
         return $this;
     }
 
+    /**
+     * @return bool|null
+     */
+    public function getIsCanceled(): ?bool
+    {
+        return $this->isCanceled;
+    }
+
+    /**
+     * @param bool|null $isCanceled
+     * @return Event
+     */
+    public function setIsCanceled(?bool $isCanceled): Event
+    {
+        $this->isCanceled = $isCanceled;
+        return $this;
+    }
+    
     /**
      * @return array|null
      */
