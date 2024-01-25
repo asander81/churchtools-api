@@ -11,6 +11,7 @@ class Appointment extends AbstractModel
     use FillWithData;
 
     protected ?string $caption = null;
+    protected ?string $address = null;
     protected ?string $note = null;
     protected ?string $version = null;
     protected ?Calendar $calendar = null;
@@ -71,6 +72,24 @@ class Appointment extends AbstractModel
     public function setCaption(?string $caption): Appointment
     {
         $this->caption = $caption;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param string|null $address
+     * @return Appointment
+     */
+    public function setAddress(?string $address): Appointment
+    {
+        $this->address = $address;
         return $this;
     }
 
