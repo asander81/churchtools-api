@@ -23,6 +23,7 @@ class Person extends AbstractModel implements UpdatableModel
     protected ?string $firstName = null;
     protected ?string $lastName = null;
     protected ?string $nickname = null;
+    protected ?string $title = null;
     protected ?string $job = null;
     protected ?string $street = null;
     protected ?string $addressAddition = null;
@@ -99,6 +100,7 @@ class Person extends AbstractModel implements UpdatableModel
             'sexId',
             'statusId',
             'street',
+            'title',
             'zip',
         ];
     }
@@ -235,6 +237,24 @@ class Person extends AbstractModel implements UpdatableModel
     public function setNickname(?string $nickname): Person
     {
         $this->nickname = $nickname;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string|null title
+     * @return Person
+     */
+    public function setTitle(?string title): Person
+    {
+        $this->title = title;
         return $this;
     }
 
