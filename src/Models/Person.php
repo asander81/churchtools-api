@@ -249,12 +249,12 @@ class Person extends AbstractModel implements UpdatableModel
     }
 
     /**
-     * @param string|null title
+     * @param string|null $title
      * @return Person
      */
-    public function setTitle(?string title): Person
+    public function setTitle(?string $title): Person
     {
-        $this->title = title;
+        $this->title = $title;
         return $this;
     }
 
