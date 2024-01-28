@@ -17,6 +17,7 @@ class Appointment extends AbstractModel
     protected ?Calendar $calendar = null;
     protected ?string $information = null;
     protected ?string $link = null;
+    protected ?string $imageId = null;
     protected ?bool $isInternal = null;
     protected ?string $startDate = null;
     protected ?string $endDate = null;
@@ -184,6 +185,24 @@ class Appointment extends AbstractModel
     }
 
     /**
+     * @return string|null
+     */
+    public function getImageId(): ?string
+    {
+        return $this->imageId;
+    }
+
+    /**
+     * @param string|null $imageId
+     * @return Appointment
+     */
+    public function setImageId(?string $imageId): Appointment
+    {
+        $this->imageId = $imageId;
+        return $this;
+    }
+
+    /**
      * @return bool|null
      */
     public function getIsInternal(): ?bool
@@ -344,4 +363,14 @@ class Appointment extends AbstractModel
         $this->meta = $meta;
         return $this;
     }
+
+    // /**
+    //  * @param Meta|null $meta
+    //  * @return Appointment
+    //  */
+    // public function requestAppointmentImage(?Meta $meta): Appointment
+    // {
+    //     $this->meta = $meta;
+    //     return $this;
+    // }
 }
