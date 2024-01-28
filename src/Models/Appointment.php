@@ -26,7 +26,6 @@ class Appointment extends AbstractModel
     protected ?string $repeatFrequency = null;
     protected ?string $repeatUntil = null;
     protected ?string $repeatOption = null;
-    protected ?Meta $meta = null;
 
     protected function fillArrayType(string $key, array $data): void
     {
@@ -363,14 +362,4 @@ class Appointment extends AbstractModel
         $this->meta = $meta;
         return $this;
     }
-
-    // /**
-    //  * @param Meta|null $meta
-    //  * @return Appointment
-    //  */
-    // public function requestAppointmentImage(?Meta $meta): Appointment
-    // {
-    //     $this->meta = $meta;
-    //     return $this;
-    // }
 }
