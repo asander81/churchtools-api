@@ -8,7 +8,6 @@ class CampusRequestBuilder extends AbstractRequestBuilder
 {
     protected function getApiEndpoint(): string
     {
-        dump("getApiEndpoint::all");
         return "/api/campuses";
     }
 
