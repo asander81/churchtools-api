@@ -8,7 +8,6 @@ class CampusRequest
 {
     public static function all(): array
     {
-        dump("CampusRequest::all");
         return (new CampusRequestBuilder())->all();
     }
 
