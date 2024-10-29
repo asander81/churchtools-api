@@ -11,6 +11,11 @@ class FileRequest
         return new FileRequestBuilder("avatar", $personId);
     }
 
+    public static function forAppointmentImage(int $appointmentId): FileRequestBuilder
+    {
+        return new FileRequestBuilder("appointment_image", $appointmentId);
+    }
+
     public static function forGroupImage(int $groupId): FileRequestBuilder
     {
         return new FileRequestBuilder("groupimage", $groupId);
