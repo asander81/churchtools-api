@@ -26,6 +26,7 @@ class ResourceBooking extends AbstractModel
     protected ?string $statusId = null;
     protected ?string $startDate = null;
     protected ?string $endDate = null;
+    protected ?string $appointmentId = null;
     protected ?string $allDay = null;
     protected ?string $repeatId = null;
     protected ?string $repeatFrequency = null;
@@ -279,6 +280,24 @@ class ResourceBooking extends AbstractModel
     public function setEndDate(?string $endDate): ResourceBooking
     {
         $this->endDate = $endDate;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getAppointmentId(): ?string
+    {
+        return $this->appointmentId;
+    }
+
+    /**
+     * @param string|null $appointmentId
+     * @return Event
+     */
+    public function setAppointmentId(?string $appointmentId): Event
+    {
+        $this->appointmentId = $appointmentId;
         return $this;
     }
 
